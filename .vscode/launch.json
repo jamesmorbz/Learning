@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch SAE4",
+            "request": "launch",
+            "mainClass": "SAE4",
+            "projectName": "QMULwork_fc9e37e"
+        },
+        {
+            "type": "java",
+            "name": "Attach",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": "<PORT NUMBER>"
+        }
+    ]
+}
