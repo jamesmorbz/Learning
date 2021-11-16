@@ -23,10 +23,31 @@
         },
         {
             "type": "java",
+            "name": "Launch SAE3",
+            "request": "launch",
+            "mainClass": "SAE3",
+            "projectName": "QMULwork_fc9e37e"
+        },
+        {
+            "type": "java",
+            "name": "Launch SAE2",
+            "request": "launch",
+            "mainClass": "SAE2",
+            "projectName": "QMULwork_fc9e37e"
+        },
+        {
+            "type": "java",
+            "name": "Launch SAE1",
+            "request": "launch",
+            "mainClass": "SAE1",
+            "projectName": "QMULwork_fc9e37e"
+        },
+        {
+            "type": "java",
             "name": "Attach",
             "request": "attach",
             "hostName": "localhost",
-            "port": "<PORT NUMBER>"
+            "port": "5005"
         }
     ]
 }
