@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class SAE5 {
-
     public static void InputValues() {
     Scanner in = new Scanner(System.in);
     double CountingTotalMedals = 0;
