@@ -47,7 +47,7 @@
             "name": "Attach",
             "request": "attach",
             "hostName": "localhost",
-            "port": "5005"
+            "port": "<PORT NUMBER>"
         }
     ]
 }
