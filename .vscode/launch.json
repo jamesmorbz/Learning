@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SAE6",
+            "request": "launch",
+            "mainClass": "SAE6",
+            "projectName": "QMULwork_fc9e37e"
+        },
+        {
+            "type": "java",
             "name": "Launch SAE5",
             "request": "launch",
             "mainClass": "SAE5",
