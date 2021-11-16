@@ -14,7 +14,7 @@
 
     public static void letterJ() {
         System.out.println("JJJJJJJ");
-        System.out.println("   J   ");
+        System.out.println("      ");
         System.out.println("   J   ");
         System.out.println("   J   ");
         System.out.println("JJJJ   ");
