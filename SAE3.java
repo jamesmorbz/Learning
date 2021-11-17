@@ -19,7 +19,7 @@ public class SAE3 {
     public static double MainLoop() {
         double cost = 0;
         Scanner in = new Scanner(System.in);
-        System.out.print("How many hours have you parked for? (1-8)");
+        System.out.print("How many hours have you parked for? (1-8) ");
         int hours = in.nextInt();
         if (hours == 1) {
             cost = 3.00;
@@ -66,7 +66,7 @@ public class SAE3 {
         if (OAPBool == true) {
             cost = cost - 2.00;
         }
-        System.out.println("The parking charge for you is " + cost + " pounds.");
+        System.out.println("The parking charge for you is " + cost + "0 pounds.");
     }
     public static void main(String[] args) {
         isDisabled();
