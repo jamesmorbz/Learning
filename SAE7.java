@@ -74,16 +74,13 @@ public class SAE7 {
         int leg2 = disabilityclasseslist.get(1);
         int leg3 = disabilityclasseslist.get(2);
         int leg4 = disabilityclasseslist.get(3);
-
         paralympicTeam relayTeam = paralympicTeamInit(country, leg1, leg2, leg3, leg4);
 
-        //System.out.println("The " + getCountry(relayTeam) + " team is: Leg 1, T" + getLeg1(relayTeam) +"; Leg 2, T" + getLeg2(relayTeam) + "; Leg 3, T" + getLeg3(relayTeam) + "; Leg 4, T" + getLeg4(relayTeam));
         System.out.printf("The %s team is: Leg 1, T%d; Leg 2, T%d; Leg 3, T%d; Leg 4, T%d",getCountry(relayTeam),getLeg1(relayTeam),getLeg2(relayTeam),getLeg3(relayTeam), getLeg4(relayTeam));
         System.out.println();
 
         check(leg1, leg2, leg3, leg4);
     }
-
     public static void main(String[] args) {
         Relay();
     }
