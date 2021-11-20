@@ -15,7 +15,7 @@ import java.util.*;
 
 public class SAE8 {
     
-    private static long getPolishSum(String[] input) {
+    public static long getPolishSum(String[] input) {
         Stack<String> stackOfChars = new Stack<String>();
         for (int i=input.length-1; i > -1; i--) {
             if (!(input[i].equals("1") ||input[i].equals("2")||input[i].equals("3") ||input[i].equals("4")||input[i].equals("5")
