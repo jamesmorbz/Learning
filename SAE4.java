@@ -1,3 +1,16 @@
+/* ***************************************
+  Name : James Moreby
+  Date : 20/11/2021
+  Version: 1
+
+    This program allows the user to get the
+    information relating to the attraction that
+    they specify. This information can only be retrieved
+    about attractions that are currently hard coded into
+    the program.
+
+  *************************************** */
+
 import java.util.Scanner;
 
 class attraction {

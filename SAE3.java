@@ -1,3 +1,15 @@
+/* ***************************************
+  Name : James Moreby
+  Date : 20/11/2021
+  Version: 1
+
+   This program caluclates the parking cost of
+   a given person depending on how long they park
+   for and if they fit the criteria that give them
+   certain discounts.
+
+  *************************************** */
+
 import java.util.Scanner;
 
 public class SAE3 {

@@ -1,3 +1,16 @@
+/* ***************************************
+  Name : James Moreby
+  Date : 20/11/2021
+  Version: 1
+
+    This program also takes user input and performs
+    comparisons to check which train is the most punctual.
+    The most punctual train and the location it was going to
+    will be returned once the user provides the "stopcode" in
+    the form of a string containing "XXX" at any point.
+
+  *************************************** */
+
 import java.util.*;
 
 public class SAE6 {

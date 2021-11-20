@@ -1,3 +1,16 @@
+/* ***************************************
+  Name : James Moreby
+  Date : 20/11/2021
+  Version: 1
+
+    This program uses records in order to store the user input
+    and once again perform comparisons between the values
+    provided and valid values. Each leg that is entered should
+    have specific values for each if the values are different then
+    the program will let the user know of the discrepancy.
+
+  *************************************** */
+
 import java.util.*;
 
 public class SAE7 {

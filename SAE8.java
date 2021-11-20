@@ -1,3 +1,16 @@
+/* ***************************************
+  Name : James Moreby
+  Date : 20/11/2021
+  Version: 1
+
+    This program is simply a Polish Notation calculator. 
+    The only difference is that this calculator can take Input
+    of "A", "B", "C", and "T". These values are not usually supported by
+    calculators but in this case are part of the question an perform certain
+    functions.
+
+  *************************************** */
+
 import java.util.*;
 
 public class SAE8 {

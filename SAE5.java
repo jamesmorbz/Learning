@@ -1,3 +1,17 @@
+/* ***************************************
+  Name : James Moreby
+  Date : 20/11/2021
+  Version: 1
+
+    This program provides information about the
+    olympians and paralympians that the user specifies.
+    It lists them in Sport,Name,Medal Order and then performs
+    a calculation based on the information that is provided.
+    this calculation will provide the average medals won between the
+    people provided
+
+  *************************************** */
+
 import java.util.*;
 
 public class SAE5 {
