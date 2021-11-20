@@ -61,7 +61,6 @@ public class ChatBot2 {
         System.out.println("Bot: How many movies have you watched in the last week?");
         System.out.print(name + ": ");
         String stringNumberOfMovies = in.nextLine();
-        System.out.println("That's awesome!");
         char[] characters = stringNumberOfMovies.toCharArray();
         Integer value = null;
         boolean isPrevDigit = false;
@@ -79,6 +78,11 @@ public class ChatBot2 {
                 }
             }
         }
+        if (value == null) {
+            System.out.println("Bot: Your input didn't answer my question. Make sure you have digits in your answer!");
+            moviesChat(name);
+        }
+        System.out.println("That's awesome!");
         System.out.println("Bot: Tell me which movies!");
         for (int i = 0; i<value; i++) {
             System.out.println("Bot: Name one of the movies!");
