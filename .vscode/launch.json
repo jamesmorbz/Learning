@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ChatBot2",
+            "request": "launch",
+            "mainClass": "ChatBot2",
+            "projectName": "QMULwork_fc9e37e"
+        },
+        {
+            "type": "java",
             "name": "Launch SAE8",
             "request": "launch",
             "mainClass": "SAE8",
