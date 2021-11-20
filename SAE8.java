@@ -37,8 +37,7 @@ public class SAE8 {
         }
         return Long.valueOf(stackOfChars.pop());
     }
-    public static void main(String[] args)
-    {   
+    public static void main(String[] args) {   
         Scanner in = new Scanner(System.in);
         System.out.print("Please Enter the Expression: ");
         String input = in.nextLine();
