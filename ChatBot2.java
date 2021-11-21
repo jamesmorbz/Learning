@@ -9,7 +9,6 @@
         you if you like it's favourite sport.
 
 *************************************** */
-
 import java.util.*;
 
 public class ChatBot2 {
@@ -57,8 +56,16 @@ public class ChatBot2 {
 
     }
     public static void moviesChat(String name) {
+        /* ******************************
+        
+        Asks the user to enter how many movies they watched
+        Takes their input and searches through the string until it finds a number
+        Takes this number and asks the user to enter movies they watched
+
+
+        ******************************* */
         Scanner in = new Scanner(System.in);
-        System.out.println("Bot: How many movies have you watched in the last week?");
+        System.out.println("Bot: How many movies have you watched in the last month?");
         System.out.print(name + ": ");
         String stringNumberOfMovies = in.nextLine();
         char[] characters = stringNumberOfMovies.toCharArray();
@@ -81,23 +88,59 @@ public class ChatBot2 {
         if (value == null) {
             System.out.println("Bot: Your input didn't answer my question. Make sure you have digits in your answer!");
             moviesChat(name);
-        }
-        System.out.println("That's awesome!");
-        System.out.println("Bot: Tell me which movies!");
+        } else if (value == 0) {
+            System.out.println("Bot: You didn't watch any movies?? I love watching movies!");
+            System.out.println("Bot: What did you do instead?");
+            System.out.print(name + ": ");
+            String alternativeActivity = in.nextLine();
+            System.out.println("I've never done " + alternativeActivity + " before, I must try it!");
+        } else {
+        System.out.println("Bot: You watched " + value + " movies! That's awesome! I'm really interested to find out more about the movies you watched!");
         for (int i = 0; i<value; i++) {
+            int min = 1;
+            int max = 2;
+            int randomNum = (int) Math.floor(Math.random()*(max-min+1)+min);
             System.out.println("Bot: Name one of the movies!");
             System.out.print(name +": ");
             String movieName = in.nextLine();
-            System.out.println(movieName + " sounds like an really good movie");
+            if (randomNum == 1) {
+                System.out.println("Bot: " + movieName + " sounds like an really good movie");
+            } else {
+                System.out.println("Bot: " + movieName + " doesn't sound very interesting");
+                System.out.println("Bot: What genre is " + movieName );
+                System.out.print(name + ": ");
+                String movieDescription = in.nextLine();
+                if (movieDescription.contains("Horror")) {
+                    System.out.println("Bot: AHHHHH! That's Scary!!!!");
+                    System.out.println("Bot: Did you enjoy it?!");
+                    System.out.print(name + ": ");
+                    String horrorEnjoy = in.nextLine();
+                    if (horrorEnjoy.toLowerCase().contains("yes")) {
+                        System.out.println("Bot: You're crazy!");
+                    } else {
+                        System.out.println("Bot: I'm gonna take that as a no!");
+                    }
+                        
+                } else {
+                    System.out.println("Bot: I might quite like that actually");
+                }
+            }
+        }
     }
-    System.out.println("Bot: All those movies were awesome, I'm gonna have watch them!");
 }
-            
+    public static void userPicksTopic(String name) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Bot: I don't want to bore you with movie chatter. What would you like to talk about?");
+        System.out.print(name + ": ");
+        String userChosenSubject = in.nextLine();
+        System.out.println("Bot: Ok! Let's talk about " + userChosenSubject);
+    }
 
     public static void main(String[] args) {
         String name = quickChat();
         hobbiesChat(name);
         moviesChat(name);
+        userPicksTopic(name);
     }
 
 }
