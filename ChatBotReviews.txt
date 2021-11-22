@@ -1,0 +1,15 @@
+
+User: James
+Bot Rating is: 90/100
+Comment about Bot: Good Conversation, Nice Variety
+Possible Bot Improvements: Talk to me for longer :)
+
+User: Sami
+Bot Rating is: 42/100
+Comment about Bot: Bad Bot
+Possible Bot Improvements: Literally just delete it.
+
+User: Kurt
+Bot Rating is: 24/100
+Comment about Bot: You gave me Happiness
+Possible Bot Improvements: Be Alive
