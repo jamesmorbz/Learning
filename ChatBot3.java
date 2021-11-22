@@ -9,11 +9,15 @@
         you if you like it's favourite sport.
 
 *************************************** */
+import java.io.FileWriter;
+import java.io.IOException;
 import java.lang.System;
 import java.util.ArrayList;
-import java.util.*;
 
-public class ChatBot2 {
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+
+public class ChatBot3 {
 
     public static String quickChat() {
         /* ******************************
@@ -96,7 +100,7 @@ public class ChatBot2 {
             System.out.println("Bot: What did you do instead?");
             System.out.print(name + ": ");
             String alternativeActivity = in.nextLine();
-            System.out.println("Bot: I've never done " + alternativeActivity + " before, I must try it!");
+            System.out.println("I've never done " + alternativeActivity + " before, I must try it!");
         } else {
         System.out.println("Bot: You watched " + value + " movies! That's awesome! I'm really interested to find out more about the movies you watched!");
         for (int i = 0; i<value; i++) {
@@ -175,8 +179,7 @@ public class ChatBot2 {
             userChosenSubjectDetails subjectDetails = new userChosenSubjectDetails();
 
             subjectDetails = setUserChosenSubjectDetails(subjectDetails, details.get(0), details.get(1), details.get(2));
-            System.out.println("Bot: Your last 3 answers were: \"" + toStringSubjectDetails(subjectDetails) + "\" They have puzzled me, I must move on.");
-            System.out.println("Bot: Goodbye " + name + "!");
+            System.out.println("Your last 3 answers were: " + toStringSubjectDetails(subjectDetails) + " They have puzzled me, I must move on.");
             return;
         }
     
@@ -201,11 +204,78 @@ public class ChatBot2 {
         listOfTopicDetails.add(userHowLongForTopic);
         return listOfTopicDetails;
     }
+    public static void fileRead() {
+
+    }
+
+    public static ArrayList<String> createReview(String name) {
+        ArrayList<String> list = new ArrayList<String>();
+        Scanner in = new Scanner(System.in);
+        System.out.println("Bot: I'm gonna ask some questions about how you thought I did today:");
+        System.out.println("Bot: Please enter how well you think I was able to talk to you (Rated 1-100, Higher being better).");
+        System.out.print(name + ": ");
+        String rating = in.nextLine();
+        System.out.println("Bot: You rated me " + rating + "/100");
+        System.out.println("Please give me a verbal comment review.");
+        System.out.print(name + ": ");
+        String verbalComment = in.nextLine();
+        System.out.println("Please give me potential improvements to the program");
+        System.out.print(name + ": ");
+        String improvementsComment = in.nextLine();
+        list.add(name);
+        list.add(rating);
+        list.add(verbalComment);
+        list.add(improvementsComment);
+        return list;
+    }
+
+    public static void outputReview(String name) {
+        ArrayList<String> list = createReview(name);
+        try {
+            FileWriter myWriter = new FileWriter("ChatBotLogs.txt");
+            myWriter.write("User: " + name + "\n");
+            myWriter.write("The rating for your bot is: " + list.get(1) + "/100" + "\n");
+            myWriter.write("The comment about your bot is: " + list.get(2) + "\n");
+            myWriter.write("The improvement for your bot is: " + list.get(3)+ "\n");
+            myWriter.close();
+            System.out.println("Bot: Your review is being processed.");
+            System.out.println("Bot: 10% Done...");
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println("Bot: 20% Done...");
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println("Bot: 30% Done...");
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println("Bot: 40% Done...");
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println("Bot: 50% Done...");
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println("Bot: 60% Done...");
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println("Bot: 70% Done...");
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println("Bot: 80% Done...");
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println("Bot: 90% Done...");
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println("Bot: Completed!");
+            TimeUnit.SECONDS.sleep(2);
+            System.out.println("Bot: Your review has been submitted.");
+            TimeUnit.SECONDS.sleep(2);
+            System.out.println("Bot: Program Closing...Goodbye " + list.get(0) + "!");
+            System.exit(1);
+          } catch (IOException | InterruptedException e) {
+            System.out.println("An error occurred while compiling your review.");
+            e.printStackTrace();
+          }
+    }
 
     public static void main(String[] args) {
         String name = quickChat();
         hobbiesChat(name);
         moviesChat(name);
         createUserChosenSubject(name);
+        outputReview(name);
+        
     }
+    
 }
