@@ -1,4 +1,0 @@
-User: James
-The rating for your bot is: 3000/100
-The comment about your bot is: james
-The improvement for your bot is: James
