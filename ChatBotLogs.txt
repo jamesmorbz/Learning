@@ -1,0 +1,4 @@
+User: James
+The rating for your bot is: Good/100
+The comment about your bot is: Good
+The improvement for your bot is: Good
