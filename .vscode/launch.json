@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Records",
+            "request": "launch",
+            "mainClass": "JHUB_Docs.Records",
+            "projectName": "QMULwork_fc9e37e"
+        },
+        {
+            "type": "java",
             "name": "Launch ChatBot1",
             "request": "launch",
             "mainClass": "ChatBot1",
