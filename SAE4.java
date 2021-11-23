@@ -13,21 +13,6 @@
 
 import java.util.Scanner;
 
-class attraction {
-    String name;
-    int time;
-    boolean bankHolidays;
-    
-    public String toString() {
-        return name ;
-    }
-    
-    public attraction(String attractionName, int openingTime, boolean openOnBankHolidays) {
-        name = attractionName;
-        time = openingTime;
-        bankHolidays = openOnBankHolidays;
-    }
-}
 
 public class SAE4 {
 
@@ -95,5 +80,20 @@ public class SAE4 {
     }
     public static void main(String[] args) {
         objectAdder();
+    }
+}
+class attraction {
+    String name;
+    int time;
+    boolean bankHolidays;
+    
+    public String toString() {
+        return name;
+    }
+    
+    public attraction(String attractionName, int openingTime, boolean openOnBankHolidays) {
+        name = attractionName;
+        time = openingTime;
+        bankHolidays = openOnBankHolidays;
     }
 }

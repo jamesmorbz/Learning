@@ -14,15 +14,7 @@
 import java.util.*;
 
 public class SAE7 {
-
-    public static class paralympicTeam{
-        int leg1;
-        int leg2;
-        int leg3;
-        int leg4;
-        String country;
-    }
-
+                        
     public static paralympicTeam paralympicTeamInit(String country, int leg1, int leg2, int leg3, int leg4) {
         paralympicTeam relayTeam = new paralympicTeam();
         relayTeam.leg1 = leg1;
@@ -33,27 +25,27 @@ public class SAE7 {
         return relayTeam;
     }
 
-    public static int getLeg1(paralympicTeam relayTeam){
+    public static int getLeg1(paralympicTeam relayTeam){ //Getting Leg1
         return relayTeam.leg1;
     }
 
-    public static int getLeg2(paralympicTeam relayTeam){
+    public static int getLeg2(paralympicTeam relayTeam){ //Getting Leg1
         return relayTeam.leg2;
     }
 
-    public static int getLeg3(paralympicTeam relayTeam){
+    public static int getLeg3(paralympicTeam relayTeam){ //Getting Leg1
         return relayTeam.leg3;
     }
 
-    public static int getLeg4(paralympicTeam relayTeam){
+    public static int getLeg4(paralympicTeam relayTeam){ //Getting Leg1
         return relayTeam.leg4;
     }
 
-    public static String getCountry(paralympicTeam relayTeam){
+    public static String getCountry(paralympicTeam relayTeam){ //Getting Leg1
         return relayTeam.country;
     }
 
-    public static void check(int leg1, int leg2, int leg3, int leg4){
+    public static void check(int leg1, int leg2, int leg3, int leg4){ //logic which checks if the legs are legal or not using not gate of the only legal legs
         if (!(leg1 == 11 || leg1 == 13)){
             System.out.println("Leg 1 (T" + leg1 + ") is not legal." );
         }
@@ -90,11 +82,18 @@ public class SAE7 {
         paralympicTeam relayTeam = paralympicTeamInit(country, leg1, leg2, leg3, leg4);
 
         System.out.printf("The %s team is: Leg 1, T%d; Leg 2, T%d; Leg 3, T%d; Leg 4, T%d",getCountry(relayTeam),getLeg1(relayTeam),getLeg2(relayTeam),getLeg3(relayTeam), getLeg4(relayTeam));
-        System.out.println();
+        System.out.println(); // fstring printing is really nice
 
         check(leg1, leg2, leg3, leg4);
     }
     public static void main(String[] args) {
         Relay();
     }
+}
+class paralympicTeam{
+    int leg1;
+    int leg2;
+    int leg3;
+    int leg4;
+    String country;
 }

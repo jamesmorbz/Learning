@@ -279,6 +279,7 @@ public class ChatBot3 {
     }
 
     public static void sportSorting(String name) throws InterruptedException {
+        String regex = "[^a-zA-Z]+";
         System.out.println("Bot: I'm glad you're here actually, I need something. Wait here.");
         String[] stringOfSports = fileRead();
         Scanner in = new Scanner(System.in);
@@ -309,7 +310,7 @@ public class ChatBot3 {
         }
         Dictionary<String, Integer> Dictionary = new Hashtable<String, Integer>();
         for (int i = 0; i < stringOfSports.length; i++) {
-            System.out.println("Bot: Rate " + stringOfSports[i] + " on a scale of 1-10");
+            System.out.print("Bot: Rate " + stringOfSports[i] + " on a scale of 1-10");
             System.out.println("");
             System.out.print(name + ": ");
             int ratingOfSport = in.nextInt();
@@ -329,7 +330,6 @@ public class ChatBot3 {
             mapSortedByValues.put(entry.getKey(), entry.getValue());
         }
         String sortedMap = mapSortedByValues.toString();
-        String regex = "[^a-zA-Z]+";
         sortedMap = sortedMap.replaceAll(regex, ",");
         System.out.println("Bot: I've taken what you've said into consideration and sorted a list for you!");
         System.out.println("Bot: It's ordered Least to Most Favourite: " + sortedMap);
@@ -347,10 +347,9 @@ public class ChatBot3 {
             while (myReader.hasNextLine()) {
                 String line = myReader.nextLine();
                 System.out.println(line);
-                //if (line == "") {
-                //    TimeUnit.SECONDS.sleep(2);
-                //   System.out.flush();
-                //}
+                if (line.isEmpty()) {
+                    TimeUnit.SECONDS.sleep(3);
+                }
             }
             myReader.close();
           } catch (FileNotFoundException e) {
@@ -402,10 +401,10 @@ public class ChatBot3 {
 
     public static void main(String[] args) throws InterruptedException {
         String name = quickChat();
-        hobbiesChat(name);
-        moviesChat(name);
-        createUserChosenSubject(name);
-        sportSorting(name);
+        //hobbiesChat(name);
+        //moviesChat(name);
+        //createUserChosenSubject(name);
+        //sportSorting(name);
         loadCurrentReviews();
         outputReview(name);
         

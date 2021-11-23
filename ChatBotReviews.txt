@@ -13,3 +13,8 @@ User: Kurt
 Bot Rating is: 24/100
 Comment about Bot: You gave me Happiness
 Possible Bot Improvements: Be Alive
+
+User: James
+Bot Rating is: 20/100
+Comment about Bot: Good
+Possible Bot Improvements: Bot

@@ -14,30 +14,30 @@
 
 import java.util.*;
 
-public class SAE5 {
+public class SAE5Proper {
     public static void InputValues() {
     Scanner in = new Scanner(System.in);
-    double CountingTotalMedals = 0;
-    List<String> ArrayOfOutput = new ArrayList<>();
+    double CountingTotalMedals = 0; //Cumulative Medal Counter
+    List<String> ArrayOfOutput = new ArrayList<>(); //List for the Strings
     for (int i = 0; i < 5 ; i++) {
         System.out.print("Name Olympian/Paralympian " + (i+1) + "? ");
         String OlympianName = in.nextLine();
         System.out.print("How many medals did he/she win? ");
         int NumberOfMedals = in.nextInt();
-        CountingTotalMedals = CountingTotalMedals + NumberOfMedals;
+        CountingTotalMedals = CountingTotalMedals + NumberOfMedals; //Incrementing TotalMedals by Current Number
         String NumberOfMedalsString = String.valueOf(NumberOfMedals);
         in.nextLine();
         System.out.print("What sport did he/she compete in? ");
         String SportName = in.nextLine();
-        String finalOutputString = String.join(", ", SportName, OlympianName, NumberOfMedalsString);
-        ArrayOfOutput.add(finalOutputString);
+        String finalOutputString = String.join(", ", SportName, OlympianName, NumberOfMedalsString); // Create string from the 3 value inputs
+        ArrayOfOutput.add(finalOutputString); //Add String to List
         System.out.println("");
     }
-    double AverageMedals = Math.round(CountingTotalMedals / 5.0);
-    int AverageMedalsInt = (int) AverageMedals;
+    double AverageMedals = Math.round(CountingTotalMedals / 5.0); //Do maths on average medals
+    int AverageMedalsInt = (int) AverageMedals; //Rounding
     System.out.println("Between them they won an average of " + AverageMedalsInt + " medals each.");
     for(int i=4;i>=0;i--) {
-        System.out.println(ArrayOfOutput.get(i));
+        System.out.println(ArrayOfOutput.get(i)); //Iterate through List Strings backwards therefore printing them in reverse order
     } 
 }
     public static void main(String[] args) {
