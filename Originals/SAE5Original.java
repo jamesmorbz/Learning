@@ -1,3 +1,4 @@
+package Originals;
 /* ***************************************
   Name : James Moreby
   Date : 20/11/2021
@@ -14,7 +15,7 @@
 
 import java.util.*;
 
-public class SAE5Proper {
+public class SAE5Original {
     public static void InputValues() {
     Scanner in = new Scanner(System.in);
     double CountingTotalMedals = 0; //Cumulative Medal Counter
