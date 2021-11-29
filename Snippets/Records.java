@@ -1,5 +1,3 @@
-package Snippets;
-
 public class Records {
 
         static String Model = "Volvo" ;
