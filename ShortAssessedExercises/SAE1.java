@@ -1,3 +1,4 @@
+package ShortAssessedExercises;
 /* **************************************
   Name : James Moreby
   Date : 12/10/2021

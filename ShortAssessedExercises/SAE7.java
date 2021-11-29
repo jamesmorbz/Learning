@@ -1,3 +1,4 @@
+package ShortAssessedExercises;
 /* ***************************************
   Name : James Moreby
   Date : 20/11/2021
@@ -14,7 +15,7 @@
 import java.util.*;
 
 public class SAE7 {
-                        
+
     public static paralympicTeam paralympicTeamInit(String country, int leg1, int leg2, int leg3, int leg4) {
         paralympicTeam relayTeam = new paralympicTeam();
         relayTeam.leg1 = leg1;
