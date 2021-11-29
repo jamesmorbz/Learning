@@ -1,3 +1,5 @@
+package QMULMiniProject;
+
 /* ***************************************
   Name : James Moreby
   Date : 20/11/2021

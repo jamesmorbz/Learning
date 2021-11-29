@@ -1,3 +1,5 @@
+package QMULMiniProject;
+
 /* ***************************************
   Name : James Moreby
   Date : 20/11/2021
@@ -400,11 +402,11 @@ public class ChatBot3 {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        String name = quickChat();
-        //hobbiesChat(name);
-        //moviesChat(name);
-        //createUserChosenSubject(name);
-        //sportSorting(name);
+        final String name = quickChat();
+        hobbiesChat(name);
+        moviesChat(name);
+        createUserChosenSubject(name);
+        sportSorting(name);
         loadCurrentReviews();
         outputReview(name);
         
