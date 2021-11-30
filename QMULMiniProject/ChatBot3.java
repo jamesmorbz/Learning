@@ -23,6 +23,100 @@ import java.util.Scanner;
 
 public class ChatBot3 {
 
+        // Stack ADT
+    // Push(): adding an element in the stack.
+    // Pop(): accessing or removing an element from the stack.
+    // Peek(): return the topmost element of the stack without removing it.
+    // IsFull(): check if stack is full.
+    // IsEmpty(): check if stack is empty.
+    // count(): counts the total number of elements in the stack.
+
+    public static class Stack {
+        private String arr[];
+        private int top;
+        private int capacity;
+        Stack(int size) {
+          arr = new String[size];
+          capacity = size;
+          top = -1;
+        }
+    
+        public void push(String x) {
+          if (isFull()) {
+            System.out.println("OverFlow");
+            System.exit(1);
+        }
+          arr[++top] = x;
+        }
+      
+        public String pop() {
+          if (isEmpty()) {
+            System.out.println("Underflow");
+            System.exit(1);
+          }
+          return arr[top--];
+        }
+      
+        public int size() {
+          return top + 1;
+        }
+      
+        public Boolean isEmpty() {
+          return top == -1;
+        }
+      
+        public Boolean isFull() {
+          return top == capacity - 1;
+        }
+      
+        public void DisplayStack() {
+          for (int i = 0; i <= top; i++) {
+            System.out.println(arr[i]);
+          }
+        }
+      }
+    
+    public static void partyTrick(String name, int StackCap) {
+        Stack stack = new Stack(100000);
+        Scanner in = new Scanner(System.in);
+        System.out.println("Bot: You didn't really think I'd leave you like that did you?");
+        System.out.println("Bot: Let me put on a show!");
+        System.out.println("Bot: This is my party trick. I'm going to ask you to name playing cards and I'm going to remember them and then read them back to you. Magic!");
+        System.out.println("Bot: How many items do you want to give me?");
+        System.out.print(name + ": ");
+        int NumberOfTricks = in.nextInt();
+        in.nextLine();
+        for (int i = 0; i < NumberOfTricks; i++) {
+            System.out.println("Bot: Give me a card number!");
+            System.out.print(name + ": ");
+            String cardNum = in.nextLine();
+            System.out.println("Bot: Give me a card suit! (Diamonds, Hearts, Clubs, Spades => D,H,C,S)");
+            System.out.print(name + ": ");
+            String cardSuit = in.nextLine();
+
+            stack.push(cardNum);
+            stack.push(cardSuit);
+        }
+        System.out.println("Bot: Are you ready " + name + "?");
+        for (int i = 0; i <= stack.size()+2; i++) {
+           String Suit = stack.pop();
+           String Num = stack.pop();
+           if (Suit.toLowerCase().contains("d")) {
+               Suit = "Diamonds";
+           } else if (Suit.toLowerCase().contains("h")) {
+               Suit = "Hearts";
+           } else if (Suit.toLowerCase().contains("c")) {
+               Suit = "Clubs";
+           } else if (Suit.toLowerCase().contains("s")) {
+               Suit = "Spades";
+           } else {
+               System.out.println("You're messing around. I tried really hard to make this work. Goodbye.");
+               System.exit(1);
+           }
+           System.out.println("Card " + ((int)i+1) + ": " + Num + " of " + Suit);
+        }
+    }
+
     public static String quickChat() {
         /* ******************************
         
@@ -156,7 +250,6 @@ public class ChatBot3 {
         }
     }
 }
-    
     static class userChosenSubjectDetails {
         String userChosenSubject;
         String userFactAboutTopic;
@@ -394,7 +487,6 @@ public class ChatBot3 {
             System.out.println("Bot: Your review has been submitted.");
             TimeUnit.SECONDS.sleep(1);
             System.out.println("Bot: Program Closing...Goodbye " + list.get(0) + "!");
-            System.exit(1);
           } catch (IOException | InterruptedException e) {
             System.out.println("An error occurred while compiling your review.");
             e.printStackTrace();
@@ -403,12 +495,14 @@ public class ChatBot3 {
 
     public static void main(String[] args) throws InterruptedException {
         final String name = quickChat();
+        final int StackCap = 100000;
         hobbiesChat(name);
         moviesChat(name);
         createUserChosenSubject(name);
         sportSorting(name);
         loadCurrentReviews();
         outputReview(name);
+        partyTrick(name, StackCap);
         
     }
     

@@ -18,3 +18,7 @@ User: James
 Bot Rating is: 20/100
 Comment about Bot: Good
 Possible Bot Improvements: Bot
+User: James
+Bot Rating is: 40/100
+Comment about Bot: Good Bot, Fun Game
+Possible Bot Improvements: Make more party tricks
