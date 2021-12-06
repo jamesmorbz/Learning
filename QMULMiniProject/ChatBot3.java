@@ -51,7 +51,6 @@ public class ChatBot3 {
       
         public String pop() {
           if (isEmpty()) {
-            System.out.println("Underflow");
             System.exit(1);
           }
           return arr[top--];
@@ -71,7 +70,7 @@ public class ChatBot3 {
       
         public void DisplayStack() {
           for (int i = 0; i <= top; i++) {
-            System.out.println(arr[i]);
+            System.out.print(arr[i]);
           }
         }
       }
@@ -96,8 +95,11 @@ public class ChatBot3 {
 
             stack.push(cardNum);
             stack.push(cardSuit);
+            System.out.println("Bot: I'm gonns commit this to my memory...");
+            stack.DisplayStack(); 
         }
-        System.out.println("Bot: Are you ready " + name + "?");
+
+        System.out.println("Bot: This is what I remember: ");
         for (int i = 0; i <= stack.size()+2; i++) {
            String Suit = stack.pop();
            String Num = stack.pop();
@@ -113,6 +115,7 @@ public class ChatBot3 {
                System.out.println("You're messing around. I tried really hard to make this work. Goodbye.");
                System.exit(1);
            }
+           
            System.out.println("Card " + ((int)i+1) + ": " + Num + " of " + Suit);
         }
     }
@@ -130,7 +133,6 @@ public class ChatBot3 {
         System.out.println("Bot: Hi! What's your name?");
         System.out.print("<Unknown User>: ");
         String name = in.nextLine();
-        System.out.println("");
         System.out.println("Bot: It's nice to meet you " + name + " I think we're going to be friends!");
         return name;
     }
@@ -148,21 +150,19 @@ public class ChatBot3 {
         String Fact = "It is really good for your fitness";
         Scanner in = new Scanner(System.in);
         System.out.println("Bot: Do you like " + Interest + "?");
-        System.out.println("");
         System.out.print(name +": ");
         String response = in.nextLine();
-        System.out.println("");
         if (response.toLowerCase().contains("yes")) {
             System.out.println("Bot: Me too!");
             System.out.println("Bot: " + Fact + "!");
-            System.out.println("");
+            ;
         } else if (response.toLowerCase().contains("no")) {
             System.out.println("Bot: Aww...You should try it out!");
             System.out.println("Bot: " + Fact + "!");
-            System.out.println("");
+            ;
         } else {
             System.out.println("Bot: I didn't quite catch that. I'm silly sometimes! Do you like " + Interest + "? Try \"yes\" or \"no\"");
-            System.out.println("");
+            ;
             hobbiesChat(name);
         }
 
@@ -179,10 +179,8 @@ public class ChatBot3 {
         ******************************* */
         Scanner in = new Scanner(System.in);
         System.out.println("Bot: How many movies have you watched in the last month?");
-        System.out.println("");
         System.out.print(name + ": ");
         String stringNumberOfMovies = in.nextLine();
-        System.out.println("");
         char[] characters = stringNumberOfMovies.toCharArray();
         Integer value = null;
         boolean isPrevDigit = false;
@@ -202,17 +200,13 @@ public class ChatBot3 {
         }
         if (value == null) {
             System.out.println("Bot: Your input didn't answer my question. Make sure you have digits in your answer!");
-            System.out.println("");
             moviesChat(name);
         } else if (value == 0) {
             System.out.println("Bot: You didn't watch any movies?? I love watching movies!");
             System.out.println("Bot: What did you do instead?");
-            System.out.println("");
             System.out.print(name + ": ");
             String alternativeActivity = in.nextLine();
-            System.out.println("");
             System.out.println("Bot: I've never done " + alternativeActivity + " before, I must try it!");
-            System.out.println("");
         } else {
         System.out.println("Bot: You watched " + value + " movies! That's awesome! I'm really interested to find out more about the movies you watched!");
         for (int i = 0; i<value; i++) {
@@ -220,24 +214,19 @@ public class ChatBot3 {
             int max = 2;
             int randomNum = (int) Math.floor(Math.random()*(max-min+1)+min);
             System.out.println("Bot: Name one of the movies!");
-            System.out.println("");
             System.out.print(name +": ");
             String movieName = in.nextLine();
-            System.out.println("");
             if (randomNum == 1) {
                 System.out.println("Bot: " + movieName + " sounds like an really good movie");
             } else {
                 System.out.println("Bot: " + movieName + " doesn't sound very interesting");
                 System.out.println("Bot: What genre is " + movieName );
-                System.out.println("");
                 System.out.print(name + ": ");
                 String movieDescription = in.nextLine();
-                System.out.println("");
                 if (movieDescription.contains("Horror") || movieDescription.contains("Gore") || movieDescription.contains("Murder Mystery")) {
                     System.out.println("Bot: Did you enjoy it?!");
                     System.out.print(name + ": ");
                     String horrorEnjoy = in.nextLine();
-                    System.out.println("");
                     if (horrorEnjoy.toLowerCase().contains("yes")) {
                         System.out.println("Bot: You're crazy!");
                     } else {
@@ -300,23 +289,17 @@ public class ChatBot3 {
     public static ArrayList<String> userPicksTopic(String name) {
         Scanner in = new Scanner(System.in);
         System.out.println("Bot: I don't want to bore you with movie chatter. What would you like to talk about?");
-        System.out.println("");
         System.out.print(name + ": ");
         String userChosenSubject = in.nextLine();
-        System.out.println("");
         System.out.println("Bot: Ok! Let's talk about " + userChosenSubject);
         System.out.println("Bot: Tell me something about it!");
-        System.out.println("");
         System.out.print(name + ": ");
         String userFactAboutTopic = in.nextLine();
-        System.out.println("");
         System.out.println("Bot: I really never knew " + userFactAboutTopic);
         System.out.println("Bot: Is " + userChosenSubject + " something you've been known about for a while?");
         System.out.print(name + ": ");
         String userHowLongForTopic = in.nextLine();
-        System.out.println("");
         System.out.println("Bot: You've been doing " + userChosenSubject + " for " + userHowLongForTopic + " that's really interesting");
-        System.out.println("");
         ArrayList<String> listOfTopicDetails = new ArrayList<String>();
         listOfTopicDetails.add(userChosenSubject);
         listOfTopicDetails.add(userFactAboutTopic);
@@ -348,24 +331,17 @@ public class ChatBot3 {
     public static ArrayList<String> createReview(String name) {
         ArrayList<String> list = new ArrayList<String>();
         Scanner in = new Scanner(System.in);
-        System.out.println("");
         System.out.println("Bot: I'm gonna ask some questions about how you thought I did today:");
         System.out.println("Bot: Please enter how well you think I was able to talk to you (Rated 1-100, Higher being better).");
-        System.out.println("");
         System.out.print(name + ": ");
         String rating = in.nextLine();
-        System.out.println("");
         System.out.println("Bot: You rated me " + rating + "/100");
         System.out.println("Please give me a verbal comment review.");
-        System.out.println("");
         System.out.print(name + ": ");
         String verbalComment = in.nextLine();
-        System.out.println("");
         System.out.println("Please give me potential improvements to the program");
-        System.out.println("");
         System.out.print(name + ": ");
         String improvementsComment = in.nextLine();
-        System.out.println("");
         list.add(name);
         list.add(rating);
         list.add(verbalComment);
@@ -380,11 +356,8 @@ public class ChatBot3 {
         Scanner in = new Scanner(System.in);
         System.out.println("Bot: I am hoping that you can help me human. I need to know which sport humans enjoy most. I struggle playing most sports myself.");
         System.out.println("Bot: I am going to list some sports. Can you rank them on a scale of 1-10?");
-        System.out.println("");
         System.out.print(name + ": ");
-        System.out.println("");
         String beingHelpful = in.nextLine();
-        System.out.println("");
         if (beingHelpful.toLowerCase().contains("yes")) {
             System.out.println("Bot: Thanks, I won't keep you for too long!");
         } else {
@@ -392,10 +365,8 @@ public class ChatBot3 {
         }
         System.out.println("Bot: Here are the sports: " + Arrays.toString(stringOfSports));
         System.out.println("Bot: Ready?");
-        System.out.println("");
         System.out.print(name + ": ");
         String readyornot = in.nextLine();
-        System.out.println("");
         if (readyornot.toLowerCase().contains("yes")) {
             System.out.println("Bot: Lets go! I'm gonna run through them 1 by 1");
         } else if (readyornot.toLowerCase().contains("no")) {
@@ -406,10 +377,8 @@ public class ChatBot3 {
         Dictionary<String, Integer> Dictionary = new Hashtable<String, Integer>();
         for (int i = 0; i < stringOfSports.length; i++) {
             System.out.print("Bot: Rate " + stringOfSports[i] + " on a scale of 1-10");
-            System.out.println("");
             System.out.print(name + ": ");
             int ratingOfSport = in.nextInt();
-            System.out.println("");
             Dictionary.put(stringOfSports[i], ratingOfSport);
         }
 
@@ -462,6 +431,7 @@ public class ChatBot3 {
             myWriter.write("Bot Rating is: " + list.get(1) + "/100" + "\n");
             myWriter.write("Comment about Bot: " + list.get(2) + "\n");
             myWriter.write("Possible Bot Improvements: " + list.get(3));
+            myWriter.write("\n");
             myWriter.close();
             System.out.println("Bot: Your review is being processed.");
             System.out.println("Bot: 10% Done...");
@@ -493,13 +463,51 @@ public class ChatBot3 {
           }
     }
 
+    public static int[] CreatingRandomIntsForSorting(String name) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Bot: I don't just sort like that, I'm like Cat in the Hat. I have many tricks!");
+        System.out.println("Bot: Tell me how many numbers you want me to generate and sort. Numbers have always been my strongpoint but I'm better at 0s and 1s :)");
+        System.out.print(name + ": ");
+        int NumberOfRandNums = in.nextInt();
+        int[] RandNumsList = new int[NumberOfRandNums];
+        for (int i=0; i < NumberOfRandNums; i++) {
+        final int min = 1;
+        final int max = 1000;
+        int randomNum = (int) Math.floor(Math.random()*(max-min+1)+min);
+        RandNumsList[i] = randomNum;
+        }
+        return RandNumsList;
+    }
+
+    public static void SortingInts(String name) {
+        int[] RandNumsList = CreatingRandomIntsForSorting(name);
+        System.out.println("Bot: Here is the list before sorting!");
+        System.out.println(Arrays.toString(RandNumsList));
+        boolean sorted = false;
+        int temp;
+        while(!sorted) {
+            sorted = true;
+            for (int i = 0; i < RandNumsList.length - 1; i++) {
+                if (RandNumsList[i] > RandNumsList[i+1]) {
+                    temp = RandNumsList[i];
+                    RandNumsList[i] = RandNumsList[i+1];
+                    RandNumsList[i+1] = temp;
+                    sorted = false;
+                }
+            }
+        }
+        System.out.println("Bot: Here is the list after I've sorted it!");
+        System.out.println(Arrays.toString(RandNumsList));
+    }
+
     public static void main(String[] args) throws InterruptedException {
-        final String name = quickChat();
-        final int StackCap = 100000;
+        final String name = quickChat(); // stores the name of the user so that it can be used
+        final int StackCap = 100000; // final variable
         hobbiesChat(name);
         moviesChat(name);
         createUserChosenSubject(name);
         sportSorting(name);
+        SortingInts(name);
         loadCurrentReviews();
         outputReview(name);
         partyTrick(name, StackCap);
