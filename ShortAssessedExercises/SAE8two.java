@@ -19,24 +19,24 @@ public class SAE8two {
         else if (expression.get(i).equals("T")){ // Looking for T
             return 1;
         }
-        else {
+        else { // this is important such that it does not confuse 1T and T1
             return 0;
         }
     }
 
     public static int checkForCalculation(ArrayList<String> expression, int startingPosition){
         int value = 0;
-        value += compare(expression,startingPosition);
-        value += compare(expression,startingPosition+1);
+        value += compare(expression,startingPosition);  //values are two integers or a T followed by an integer
+        value += compare(expression,startingPosition+1); //values are two integers or a T followed by an integer
         return value;
     }
 
     public static int firstAppearance(ArrayList<String> expression, int i, boolean foundValue){
 
-        if (!foundValue){
+        if (!foundValue){ //until there are two integers next to each other
             int checkValue = checkForCalculation(expression, i);
-            if (checkValue ==2) {
-                return firstAppearance(expression, i, true);
+            if (checkValue ==2) { //or a T followed by an integer returning the index
+                return firstAppearance(expression, i, true); //position of the T or integer.
             }
             else {
                 i++;
@@ -52,9 +52,9 @@ public class SAE8two {
     public static int convertingLetters(int firstValue, ArrayList<String> expression){
 
         return switch (expression.get(firstValue)) {
-            case "A" -> 10;
-            case "B" -> 11;
-            case "C" -> 12;
+            case "A" -> 10; // if value = A value actually equals 10
+            case "B" -> 11; // if value = B value actually equals 11
+            case "C" -> 12; // if value = C value actually equals 12
             default -> Integer.parseInt(expression.get(firstValue));
         };
     }
@@ -78,11 +78,11 @@ public class SAE8two {
     }
 
     public static void performAllCalculations(ArrayList<String> expression){
-        if (expression.size()!=1){
+        if (expression.size()!=1){  // keeps going until only one left
             performSingularCalculation(expression);
             performAllCalculations(expression);
         }
-        else{
+        else{ // keeps going until only one left
             String onlyValue = Integer.toString(convertingLetters(0,expression));
             expression.set(0, onlyValue);
 
@@ -99,13 +99,10 @@ public class SAE8two {
             performAllCalculations(expression);
             System.out.println("The answer is " + expression.get(0));
         }
-        catch (IndexOutOfBoundsException e) { // If it slips out of bounds we know that REGEX probably didn't match
+        catch (IndexOutOfBoundsException e) { // If it slips out of bounds we know that REGEX probably didn't match, if an invalid expression is, entered an index out of bound error always occurs
             System.out.println("Invalid expression entered");
             recursiveInput();
         }
-
-
-
     }
 
     public static void main(String[] args) {
