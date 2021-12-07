@@ -76,6 +76,16 @@ public class ChatBot3 {
       }
     
     public static void partyTrick(String name, int StackCap) {
+
+        /* ******************************
+        
+        Uses the ADT above to implement a stack manually
+        Puts playing cards on the stacks as the user inputs them
+        recalls what is on the stack
+
+
+        ******************************* */
+
         Stack stack = new Stack(100000);
         Scanner in = new Scanner(System.in);
         System.out.println("Bot: You didn't really think I'd leave you like that did you?");
@@ -480,19 +490,27 @@ public class ChatBot3 {
     }
 
     public static void SortingInts(String name) {
+         /* ******************************
+        
+        Sorts a random number of ints
+        user specifies the number of ints it wants the bot to create
+        bot then iterates through that number and prints them 
+
+
+        ******************************* */
         int[] RandNumsList = CreatingRandomIntsForSorting(name);
         System.out.println("Bot: Here is the list before sorting!");
         System.out.println(Arrays.toString(RandNumsList));
         boolean sorted = false;
-        int temp;
+        int bigger;
         while(!sorted) {
-            sorted = true;
-            for (int i = 0; i < RandNumsList.length - 1; i++) {
-                if (RandNumsList[i] > RandNumsList[i+1]) {
-                    temp = RandNumsList[i];
-                    RandNumsList[i] = RandNumsList[i+1];
-                    RandNumsList[i+1] = temp;
-                    sorted = false;
+            sorted = true; // sets sorted to false so if it doesn't hit the if loop it will break
+            for (int i = 0; i < RandNumsList.length - 1; i++) { // nested for loop inside while
+                if (RandNumsList[i] > RandNumsList[i+1]) { // if prev > next switch prev with next
+                    bigger = RandNumsList[i]; // store bigger item
+                    RandNumsList[i] = RandNumsList[i+1]; // stick next with prev (flip item 2 with item 1)
+                    RandNumsList[i+1] = bigger; // stick bigger item in i+1
+                    sorted = false; // went through the loop so it wasnt sorted, keep looping
                 }
             }
         }

@@ -23,3 +23,19 @@ for (int i = 0; i < stringOfSports.length; i++) {
 for (int i = 0; i < stringOfSports.length; i++) {
     Dictionary.get
 }
+
+        // FROM SAE8two.java
+       //logic
+        //boolean found = false;
+        //int i = 0;
+        //while(!found) {
+        //    int checkValue = checkForCalculation(expression, i);
+        //    if (checkValue ==2){
+        //        found = true;
+        //    }
+        //    else{
+        //        i++;
+        //    }
+        //
+        //}
+
