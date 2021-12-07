@@ -10,7 +10,7 @@ with open('E:\QMULwork\AdventOfChristmas2021\Day2Input.txt') as inputs:
   for line in inputs:
     direction = line.split(" ")[0]
     value = line.split(" ")[1]
-    line = [direction, value.split("\n")[0]]
+    line = [direction, value]
     list.append(line)
 
 while i < len(list):
