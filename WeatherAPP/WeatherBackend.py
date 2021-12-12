@@ -17,11 +17,11 @@ query_input = ""
 #TODO read Country code + Country from an API
 
 def converting_csv_to_lowercase():
-    for line in fileinput.input('E:\QMULwork\WeatherAPP\Country-CountryCode.csv', inplace=1):
+    for line in fileinput.input('E:\Learning\WeatherAPP\Country-CountryCode.csv', inplace=1):
         print(line.lower(), end='') 
 
 def reading_csv_to_dict():
-    with open('E:\QMULwork\WeatherAPP\Country-CountryCode.csv', mode='r') as infile:
+    with open('E:\Learning\WeatherAPP\Country-CountryCode.csv', mode='r') as infile:
         reader = csv.reader(infile)
         c_cc_dict = {rows[0]:rows[1] for rows in reader}
         return c_cc_dict
