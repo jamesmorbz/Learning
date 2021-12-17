@@ -1,6 +1,6 @@
 # Learning
 
-## This Repo was made around October 2021. First Repo I've made and contains all the learning I've done and all the programs I've made during my time at QMUL.
+This Repo was made around October 2021. First Repo I've made and contains all the learning I've done and all the programs I've made during my time at QMUL.
 
 ### Currently Contains:
 
