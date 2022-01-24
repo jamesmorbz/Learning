@@ -1,4 +1,4 @@
-package EndTerm;
+package Learning.EndTerm;
 import java.util.Random;
 import java.util.Scanner;
 

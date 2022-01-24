@@ -1,4 +1,4 @@
-package ShortAssessedExercises;
+package Learning.ShortAssessedExercises;
 /* ***************************************
   Name : James Moreby
   Date : 18/10/2021

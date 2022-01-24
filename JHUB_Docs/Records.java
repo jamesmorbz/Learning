@@ -1,4 +1,4 @@
-package JHUB_Docs;
+package Learning.JHUB_Docs;
 
 public record Records() {
     

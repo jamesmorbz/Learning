@@ -1,4 +1,4 @@
-package Sami_Work_Testing;
+package Learning.Sami_Work_Testing;
 import java.util.*;
 
 public class SamiMiniProject {

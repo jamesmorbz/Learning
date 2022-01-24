@@ -1,4 +1,4 @@
-package EndTerm;
+package Learning.EndTerm;
 import java.lang.System; //imports
 import java.util.*; //imports
 import java.util.Scanner; //imports

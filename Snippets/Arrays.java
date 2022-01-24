@@ -1,4 +1,4 @@
-package Snippets;
+package Learning.Snippets;
 
 public class Arrays {
 

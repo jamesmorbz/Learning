@@ -1,4 +1,4 @@
-package QMULMiniProject;
+package Learning.QMULMiniProject;
 
 /* ***************************************
   Name : James Moreby

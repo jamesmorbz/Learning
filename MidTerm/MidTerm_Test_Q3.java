@@ -1,4 +1,4 @@
-package MidTerm;
+package Learning.MidTerm;
 import java.util.Scanner;
 
 public class MidTerm_Test_Q3 {

@@ -1,4 +1,4 @@
-package Snippets;
+package Learning.Snippets;
 
 import java.io.FileWriter;
 import java.io.IOException;

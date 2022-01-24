@@ -1,4 +1,4 @@
-package ShortAssessedExercises;
+package Learning.ShortAssessedExercises;
 
 import java.util.ArrayList;
 import java.util.List;
