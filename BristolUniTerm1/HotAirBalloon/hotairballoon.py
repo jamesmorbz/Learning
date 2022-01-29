@@ -24,8 +24,8 @@ for index, val in enumerate(dataframe["Vy (mph)"]): # Iterate through each value
 x_values = np.array(dataframe["Vx (mph)"]) # List of all the Vx Mph Values
 y_values = np.array(dataframe["Vy (mph)"]) # List of all the Vy Mph Values
 
-final_position = (x_values[-1],y_values[-1])
-print(f"Final Position of the Balloon is {final_position}")
+final_position = (x_values[-1],y_values[-1]) # Take Last Element in the array which is the final position of the balloon
+print(f"Final Position of the Balloon is {final_position}") # Print Variable Above
 
 plt.rcParams.update(  # Updating Parameters of the Graph to look better
         {
