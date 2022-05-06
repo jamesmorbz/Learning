@@ -5,6 +5,8 @@ import random
 import pdb
 import csv
 import matplotlib.pyplot as plt
+from numpy import trapz
+from scipy.stats import linregress
 # Stress = Force / Area
 
 '''
@@ -85,6 +87,34 @@ def plot_graph(y_values, x_values, graph_title):
     plt.grid(axis="both") # Creates grid in x + y direction - Can change to axis="y" or axis="x"
     plt.show() # Render Plot to Screen
 
+def proof_stress(y_values, x_values, gradient,graph_title):
+    plt.rcParams.update(  # Updating Parameters of the Graph to look better
+        {
+            "font.size": 10,
+            "xtick.major.size": 4,
+            "xtick.major.width": 1,
+            "ytick.major.size": 4,
+            "ytick.major.width": 1,
+        }
+    )
+    plt.plot(x_values, y_values) # Plot a Graph of Value X against Value Y
+    plt.xlabel("Strain") # Creating Label for X axis
+    plt.ylabel("Stress") # Creating Label for Y axis
+    y_intercept_for_proof = -0.002 * gradient
+    y_lim_high = sorted(y_values)[-1]
+    y_lim_low = sorted(y_values)[0]
+    y_vals = []
+    x_vals = []
+    for x_val in x_values:
+        value = y_intercept_for_proof + gradient * x_val
+        if value <= y_lim_high and value >= y_lim_low:
+            y_vals.append(value)
+            x_vals.append(x_val)
+    plt.plot(x_vals, y_vals, '--r')
+    plt.title(graph_title)
+    plt.grid(axis="both") # Creates grid in x + y direction - Can change to axis="y" or axis="x"
+    plt.show() # Render Plot to Screen
+
 def read_in_dataframe(filepath):
     pd.set_option('mode.chained_assignment',None)
     dataframe = pd.read_csv(filepath)
@@ -113,7 +143,9 @@ def get_modulus_values(stress, strain, lower_bound, upper_bound, material_name):
     new_strain = strain[lower_bound_index:upper_bound_index]
     
     plot_graph(new_stress, new_strain, material_name)
-    gradient_calculation(new_stress, new_strain, material_name)
+    gradient = gradient_calculation(new_stress, new_strain, material_name)
+
+    return gradient
 
 def gradient_calculation(new_stress, new_strain, material):
     first_stress = new_stress[0]
@@ -128,6 +160,8 @@ def gradient_calculation(new_stress, new_strain, material):
 
     print(f"Gradient - {material} - {gradient}")
 
+    return gradient
+
 def tension_test(INITIAL_DIAMETERS, HCS_FILEPATH, LOWERBOUND, UPPERBOUND, MATERIAL):
     ultimate_tensile_strength = 0
     failure_strain = 0
@@ -136,7 +170,7 @@ def tension_test(INITIAL_DIAMETERS, HCS_FILEPATH, LOWERBOUND, UPPERBOUND, MATERI
     dataframe_hcs = read_in_dataframe(HCS_FILEPATH)
     stress, strain = processing_dataframe(dataframe_hcs, area)
     plot_graph(stress, strain, MATERIAL)
-    get_modulus_values(stress, strain, LOWERBOUND, UPPERBOUND, MATERIAL)
+    gradient = get_modulus_values(stress, strain, LOWERBOUND, UPPERBOUND, MATERIAL)
     for value in stress:
         if value > ultimate_tensile_strength:
             ultimate_tensile_strength = value
@@ -148,6 +182,8 @@ def tension_test(INITIAL_DIAMETERS, HCS_FILEPATH, LOWERBOUND, UPPERBOUND, MATERI
     print(f"Ultimate Tensile Strength of {MATERIAL} = {ultimate_tensile_strength}")
     print(f"Failure Strain of {MATERIAL} = {failure_strain}")
     print("------------")
+    
+    proof_stress(stress, strain, gradient, MATERIAL)
 
 def torsion_test(initial_diameter, filepath, length, upper_bound, lower_bound, material_name):
     list_of_shear_stress_values = []
@@ -165,13 +201,18 @@ def torsion_test(initial_diameter, filepath, length, upper_bound, lower_bound, m
         list_of_shear_strain_values.append(shear_strain)
     plot_graph(list_of_shear_stress_values, list_of_shear_strain_values, "Shear Stress vs Shear Strain")
     get_modulus_values(list_of_shear_stress_values, list_of_shear_strain_values, lower_bound, upper_bound, material_name)
+    y = np.array(list_of_shear_stress_values)
+    x = np.array(list_of_shear_strain_values)
+    toughness = trapz(y, x)
+    print(f"Toughness is - {toughness}")
+    print("------------")
 
 HCS_MATERIAL = "High Carbon Steel"
 HCS_FILEPATH = "E:\Coding\Learning\BristolUniTerm2\CBWTest_1_HC_steel.csv"
 HCS = [9.93, 9.93, 9.92]
 HIGHCARBONUPPER = 0.00110
-HIGHCARBONLOWER = 0.00090
-
+HIGHCARBONLOWER = 0.00090	
+	
 LCS_MATERIAL = "Low Carbon Steel"
 LCS_FILEPATH = "E:\Coding\Learning\BristolUniTerm2\CBWTest_2_LC_steel.csv"
 LCS = [9.93, 9.93, 9.92]
