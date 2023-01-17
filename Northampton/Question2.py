@@ -5,13 +5,13 @@ class SentimentLexicon:
         self.dictionary = {}
 
     def create_lexicon(self, positive_words_file, negative_words_file):
-        with open(positive_words_file, 'r') as positive_words:
+        with open(f"./{positive_words_file}", 'r') as positive_words:
             for line in positive_words:
                 if ";" not in line:
                     word = line.strip()
                     self.dictionary[word] = 1
         
-        with open(negative_words_file, 'r') as negative_words:
+        with open(f"./{negative_words_file}", 'r') as negative_words:
             for line in negative_words:
                 if ";" not in line:
                     word = line.strip()
