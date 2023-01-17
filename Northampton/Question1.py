@@ -1,7 +1,6 @@
 import datetime
 import logging
 import random
-import collections
 
 class Customer:
     def __init__(self, name: str, phone: str, email: str):
