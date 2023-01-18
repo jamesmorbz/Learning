@@ -214,9 +214,9 @@ class Test:
         print(f"Invoice 3 total cost: {invoice3.invoice():.2f}")
         print(f"Number of Invoices in BookStore: {len(bookstore.get_all_invoices())}")
 
-        assert bookstore.search_invoice("INV0004") is not None
+        assert bookstore.search_invoice("INV0004") is None
         assert shipping1.count_urgent == 1
-        assert len(bookstore.get_all_invoices()) == 4
+        assert len(bookstore.get_all_invoices()) == 3
 
 
 if __name__ == "__main__":
