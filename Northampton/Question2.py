@@ -8,6 +8,8 @@ class SentimentLexicon:
         self.dictionary = {}
 
     def create_lexicon(self, positive_words_file, negative_words_file):
+        # os.path.join(sys.path[0]) takes the path of the directory the python file is running in and joins it with the file name. 
+        # This means the input needs to be in the same folder as the code.
         with open((os.path.join(sys.path[0], positive_words_file)), 'r') as positive_words:
             for line in positive_words: # looping through each line in the input file
                 if ";" not in line: # the first lines of the input file are commented and contain semi colons. These need to be omitted.
@@ -63,9 +65,9 @@ lexicon = SentimentLexicon() # instantiating the lexicon
 lexicon.create_lexicon("positive-words.txt", "negative-words.txt") # calling the function that will populate the lexicon dictionary
 classifier = Classifier(lexicon) # instatiating the classifier and passing in the lexicon
 example_text = [ # example sentences
-    "I love Python", 
-    "Python is the language I love!", 
-    "The iPhone is clearly not the most terrible and worst phone ever. It is the best."
+    "I hate every programming language including Python!", 
+    "I really don't hate this but it's not good...", 
+    "Anyone who likes coding is good but not great because it's difficult."
 ]
 classifier.classify_multiple_words(example_text) # calling the helper function that loops through the sentences above and classifies them
 classifier.show_classified_sentences() # calling the helper function that loops through the stored sentence,sentiment pairs and prints them

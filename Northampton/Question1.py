@@ -85,16 +85,17 @@ class Order:
 
 class Shipping:
     urgent_cost: float = 5.45
-    basic_cost: float  = 5.45
-    count_urgent: int = 0
+    basic_cost: float  = 3.95
     def __init__(self, order: Order, ship_date: datetime):
         self.order: Order = order
         self.ship_date: datetime = ship_date
         self.ship_cost: int = 0
+        self.count_urgent: int = 0
 
     def set_ship_cost(self, ship_cost: float):
         self.ship_cost = ship_cost
 
+    # calculating the shipping cost. 3.95 if not urgent, 5.45 if it is urgent
     def calc_ship_cost(self, is_urgent: bool):
         if is_urgent:
             self.ship_cost = self.urgent_cost
@@ -103,6 +104,7 @@ class Shipping:
             self.ship_cost = self.basic_cost
         return self.ship_cost
 
+    # helper function to increment the count_urgent for a given shipment. could allow us to extend our functionality incase we need have many levels of urgency
     def add_urgent_shipment(self):
         self.count_urgent += 1
 
@@ -129,6 +131,7 @@ class Invoice:
         self.ship_order: Shipping = ship_order
         self.total_cost: int = 0
 
+    # The invoice value is the price of the book + the price of ths shipping
     def invoice(self):
         self.total_cost = self.stock.price + self.ship_order.ship_cost
         return self.total_cost
@@ -145,9 +148,7 @@ class BookStore:
     def __init__(self):
         self.invoices: list[Invoice] = []
 
-    def get_invoices(self):
-        return self.invoices
-
+    # function to search through all the invoices in the bookstore looking for invoices matching the nbr number
     def search_invoice(self, nbr: str):
         for invoice in self.invoices:
             if invoice.invoice_nbr == nbr:
@@ -155,7 +156,8 @@ class BookStore:
         else:
             print("Invoice not found")
 
-    def find_all_invoices(self):
+    # helper function to return all invoices from the bookstore
+    def get_all_invoices(self):
         return self.invoices
 
     @property
@@ -171,7 +173,7 @@ class Test:
         logging.info("Creating 3 Test Customer Objects")
         customer1 = Customer("Mike", "".join([str(random.randint(0, 9)) for _ in range(0, 11)]), "mike@gmail.com")
         customer2 = Customer("Alice", "".join([str(random.randint(0, 9)) for _ in range(0, 11)]), "alice@hotmail.co.uk")
-        customer3 = Customer("Bob", "".join([str(random.randint(0, 9)) for _ in range(0, 11)]), "bobb@btinternet.com")
+        customer3 = Customer("Bob", "".join([str(random.randint(0, 9)) for _ in range(0, 11)]), "bob@btinternet.com")
 
         logging.info("Creating 3 Test Stock Objects")
         stock1 = Stock("A Christmas Carol", "Charles Dickens", 2.73)
@@ -187,18 +189,21 @@ class Test:
         shipping1 = Shipping(order1, datetime.date.today())
         shipping2 = Shipping(order2, datetime.date.today())
         shipping3 = Shipping(order3, datetime.date.today())
- 
+
+        logging.info("Setting Shipping Costs")
         shipping1.set_ship_cost(shipping1.calc_ship_cost(True))
         shipping2.set_ship_cost(shipping2.calc_ship_cost(False))
         shipping3.set_ship_cost(shipping3.calc_ship_cost(True))
- 
+
+        logging.info("Creating 3 Invoices")
         invoice1 = Invoice("INV0001", stock1, shipping1)
         invoice2 = Invoice("INV0002", stock2, shipping2)
         invoice3 = Invoice("INV0003", stock3, shipping3)
 
         logging.info("Creating a Bookstore")
         bookstore = BookStore()
- 
+
+        logging.info("Adding the invoices to our bookstore")
         bookstore.invoices.append(invoice1)
         bookstore.invoices.append(invoice2)
         bookstore.invoices.append(invoice3)
@@ -207,10 +212,11 @@ class Test:
         print(f"Invoice 1 total cost: {invoice1.invoice():.2f}")
         print(f"Invoice 2 total cost: {invoice2.invoice():.2f}")
         print(f"Invoice 3 total cost: {invoice3.invoice():.2f}")
- 
-        assert bookstore.search_invoice("INV0004") is None
+        print(f"Number of Invoices in BookStore: {len(bookstore.get_all_invoices())}")
+
+        assert bookstore.search_invoice("INV0004") is not None
         assert shipping1.count_urgent == 1
-        assert len(bookstore.invoices) == 3
+        assert len(bookstore.get_all_invoices()) == 4
 
 
 if __name__ == "__main__":
