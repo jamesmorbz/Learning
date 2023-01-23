@@ -1,0 +1,101 @@
+Last Name, First Name(Sex/Age)	OverAll Place	Sex Place/Div Place	DIV	Net Time	Country*
+Sisay LEMMA (M)	1	1 / 1	MElite	2:04:01	 Ethiopia
+Vincent KIPCHUMBA (M)	2	2 / 2	MElite	2:04:28	 Kenya
+Mosinet GEREMEW (M)	3	3 / 3	MElite	2:04:41	 Ethiopia
+Evans CHEBET (M)	4	4 / 4	MElite	2:05:43	 Kenya
+Birhanu LEGESE (M)	5	5 / 5	MElite	2:06:10	 Ethiopia
+Shura KITATA (M)	6	6 / 6	MElite	2:07:51	 Ethiopia
+Philip SESEMANN (M)	7	7 / 7	MElite	2:12:58	 Great Britain
+Joshua GRIFFITHS (M)	8	8 / 8	MElite	2:13:39	 Great Britain
+Matthew LEACH (M)	9	9 / 9	MElite	2:15:31	 Great Britain
+Andrew DAVIES (M)	10	10 / 10	MElite	2:15:36	 Great Britain
+Jonathan MELLOR (M)	11	11 / 11	MElite	2:16:09	 Great Britain
+Weynay GHEBRESELASSIE (M)	12	12 / 12	MElite	2:16:27	 Great Britain
+Charlie HULSON (M)	13	13 / 13	MElite	2:17:02	 Great Britain
+Josh LUNN (M)	16	14 / 14	MElite	2:18:06	 Great Britain
+Mohamud AADAN (M)	18	15 / 15	MElite	2:18:19	 Great Britain
+Nicholas TORRY (M)	19	16 / 16	MElite	2:18:39	 Great Britain
+Kenny Wilson (M)	21	17 / 1	M18-39	2:18:42	 Great Britain
+Matthew Dickinson (M)	23	18 / 2	M18-39	2:19:23	 Great Britain
+Ross Braden (M)	24	19 / 3	M18-39	2:19:33	 Great Britain
+James Connor (M)	25	20 / 4	M18-39	2:20:16	 Great Britain
+Nick Bowker (M)	26	21 / 5	M18-39	2:20:25	 Great Britain
+Doug MUSSON (M)	27	22 / 17	MElite	2:20:28	 Great Britain
+Tony Payne (M)	29	23 / 6	M18-39	2:20:50	 Thailand
+Karl Welborn (M)	31	24 / 1	M40-44	2:21:36	 Great Britain
+Joe Morwood (M)	33	25 / 7	M18-39	2:22:20	 Great Britain
+Jamie CROWE (M)	35	26 / 18	MElite	2:22:48	 Great Britain
+Richard Mcdowell (M)	36	27 / 2	M40-44	2:23:06	 Great Britain
+Markus Ploner (M)	37	28 / 3	M40-44	2:23:07	 Italy
+Gregor Yates (M)	38	29 / 8	M18-39	2:23:11	 Great Britain
+Sean Hogan (M)	40	30 / 9	M18-39	2:23:34	 Great Britain
+Tristan WOODFINE (M)	41	31 / 19	MElite	2:23:35	 Canada
+Ollie Garrod (M)	42	32 / 10	M18-39	2:23:39	 Great Britain
+Johannes Arens (M)	43	33 / 11	M18-39	2:23:55	 Germany
+Liam Aldridge (M)	44	34 / 12	M18-39	2:24:03	 Great Britain
+Richard Ollington (M)	45	35 / 13	M18-39	2:24:14	 Great Britain
+Neil Kevern (M)	46	36 / 14	M18-39	2:24:14	 Great Britain
+Ed Bovingdon (M)	47	37 / 15	M18-39	2:24:20	 Great Britain
+Anthony Woodward (M)	49	38 / 16	M18-39	2:24:39	 Great Britain
+Matthew Sutherland (M)	50	39 / 17	M18-39	2:24:49	 Great Britain
+Jack Blaiklock (M)	51	40 / 18	M18-39	2:24:53	 Great Britain
+Daniel Bagley (M)	52	41 / 19	M18-39	2:24:56	 Great Britain
+Dave Archer (M)	53	42 / 20	M18-39	2:25:04	 Great Britain
+Charlie Sandison (M)	54	43 / 21	M18-39	2:25:14	 Great Britain
+Javier De mata (M)	55	44 / 4	M40-44	2:25:32	 Spain
+Craig Ruddy (M)	56	45 / 22	M18-39	2:25:34	 Great Britain
+Michael Waddington (M)	57	46 / 23	M18-39	2:25:35	 Great Britain
+Milan Watson (M)	58	47 / 24	M18-39	2:25:54	 Great Britain
+Robert Spencer (M)	59	48 / 25	M18-39	2:25:56	 Great Britain
+Paul Molyneux (M)	60	49 / 5	M40-44	2:25:56	 Great Britain
+Hannes Rungger (M)	61	50 / 26	M18-39	2:26:06	 Italy
+Stephen Blake (M)	62	51 / 27	M18-39	2:26:06	 Great Britain
+Eoghan TOTTEN (M)	63	52 / 20	MElite	2:26:08	 Ireland
+Nicholas Barry (M)	64	53 / 28	M18-39	2:26:12	 Great Britain
+Stuart Haynes (M)	65	54 / 1	M45-49	2:26:26	 Great Britain
+Farid Mukhamedzarifov (M)	66	55 / 2	M45-49	2:26:27	 Russia
+Chris Williams (M)	67	56 / 29	M18-39	2:26:33	 Great Britain
+Peter Robinson (M)	68	57 / 30	M18-39	2:26:36	 Great Britain
+Ben Leaman (M)	69	58 / 31	M18-39	2:26:39	 Great Britain
+Rob Scott (M)	70	59 / 32	M18-39	2:26:39	 Great Britain
+James Hoad (M)	71	60 / 33	M18-39	2:26:43	 Great Britain
+Stephen Jackson (M)	72	61 / 34	M18-39	2:26:51	 Great Britain
+Ben Shearer (M)	73	62 / 3	M45-49	2:26:59	 Great Britain
+Dale Seddon (M)	74	63 / 35	M18-39	2:27:01	 Great Britain
+David Hudson (M)	77	64 / 6	M40-44	2:27:32	 Great Britain
+Anthony Clark (M)	78	65 / 7	M40-44	2:27:35	 Great Britain
+Valentin Harwardt (M)	79	66 / 8	M40-44	2:27:50	 Germany
+Gary Hegarty (M)	80	67 / 36	M18-39	2:28:06	 Great Britain
+Joe Hartley (M)	81	68 / 37	M18-39	2:28:06	 Great Britain
+Andrew Greenleaf (M)	82	69 / 38	M18-39	2:28:13	 Great Britain
+Luis Schenk (M)	83	70 / 39	M18-39	2:28:13	 Great Britain
+Christopher Greenwood (M)	84	71 / 4	M45-49	2:28:14	 Great Britain
+Robert Wilson (M)	85	72 / 40	M18-39	2:28:15	 Great Britain
+Jack Bromley (M)	86	73 / 41	M18-39	2:28:20	 Great Britain
+Jamie Stephenson (M)	87	74 / 42	M18-39	2:28:22	 Great Britain
+Ben Heron (M)	88	75 / 43	M18-39	2:28:27	 Great Britain
+Danny Rock (M)	89	76 / 44	M18-39	2:28:27	 Great Britain
+Peter Tucker (M)	90	77 / 9	M40-44	2:28:27	 Great Britain
+Thomas Almond (M)	91	78 / 45	M18-39	2:28:30	 Great Britain
+Bjorn Wastvedt (M)	92	79 / 46	M18-39	2:28:31	USA
+Rob Michaelson-yeates (M)	93	80 / 10	M40-44	2:28:33	 Great Britain
+John Payne (M)	94	81 / 47	M18-39	2:28:36	 Great Britain
+Tom Van ongeval (M)	95	82 / 5	M45-49	2:28:37	 Belgium
+Alan Darby (M)	96	83 / 48	M18-39	2:28:40	 Great Britain
+Aran Davidson (M)	97	84 / 49	M18-39	2:28:42	 Great Britain
+Christoforos Xenos (M)	98	85 / 50	M18-39	2:28:50	 Greece
+Morten Bakke (M)	99	86 / 51	M18-39	2:28:53	 Norway
+Mark Angus (M)	100	87 / 11	M40-44	2:29:00	 South Africa
+Jonathan Walton (M)	101	88 / 1	M50-54	2:29:01	 Great Britain
+Donald Brooks (M)	102	89 / 12	M40-44	2:29:03	 Great Britain
+Derek Griffin (M)	103	90 / 52	M18-39	2:29:04	 Ireland
+Dan NASH (M)	104	91 / 21	MElite	2:29:12	 Great Britain
+John Kinsella (M)	105	92 / 13	M40-44	2:29:18	 Ireland
+Matthew Kruger (M)	106	93 / 53	M18-39	2:29:19	USA
+Arthur Dickson-bell (M)	107	94 / 54	M18-39	2:29:19	 Great Britain
+Ben Renshaw (M)	108	95 / 14	M40-44	2:29:19	 Great Britain
+Alix Ramsier (M)	109	96 / 55	M18-39	2:29:36	 Great Britain
+Marcin Soszka (M)	110	97 / 56	M18-39	2:29:39	 Poland
+Harry Lupton (M)	113	98 / 57	M18-39	2:29:45	 Ireland
+Peter Mackrell (M)	114	99 / 58	M18-39	2:29:52	 Great Britain
+John Sharp (M)	115	100 / 6	M45-49	2:29:53	 Great Britain
