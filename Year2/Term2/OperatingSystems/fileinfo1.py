@@ -17,6 +17,7 @@ for file_name in glob.glob('*'):
     else:
         file_size = "N/A"
         file_type = "N/A"
+        
     # Get the file modified time and format it
     modified_time = os.path.getmtime(file_name)
     modified_time_str = datetime.fromtimestamp(modified_time).strftime("%b %d %Y %H:%M")
