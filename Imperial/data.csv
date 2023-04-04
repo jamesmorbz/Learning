@@ -1,0 +1,97 @@
+regime,line,food,sex,name,wingarea,cellarea,cellnumber
+Control,C1,poor,Female,Gaetana,0.875196132,15.88515606,5509522
+Control,C1,poor,Female,Jacqui ,0.774110018,15.65144896,4945932
+Control,C2,poor,Female,Naira ,0.897836708,17.30972984,5186890
+Control,C2,poor,Female,Iva ,0.851247249,16.71318927,5093266
+Control,C3,poor,Female,Nuria ,0.762895389,17.64285345,4324104
+Control,C3,poor,Female,Kornelia ,0.878731495,18.53172503,4741768
+Control,C4,poor,Female,Veda ,0.761228881,16.42485784,4634615
+Control,C4,poor,Female,Kehinda ,0.902854818,16.7409522,5393091
+Control,C5,poor,Female,Beate,0.933483137,16.71318927,5585308
+Control,C5,poor,Female,Dagny ,1.012054745,18.95781018,5338458
+Control,C6,poor,Female,Letitia ,0.91613715,18.06513038,5071301
+Control,C6,poor,Female,Nindaanis,0.884811714,18.95781018,4667268
+Control,C1,standard,Female,Sonal ,1.274815139,18.56250879,6867688
+Control,C1,standard,Female,Regina ,1.259170588,20.08056452,6270594
+Control,C2,standard,Female,Nadzeya,1.121183129,17.02678014,6584822
+Control,C2,standard,Female,Beatrice ,1.166424074,17.58906327,6631530
+Control,C3,standard,Female,Kalie ,1.033189722,20.08056452,5145222
+Control,C3,standard,Female,Luminita ,0.992925089,21.34801263,4651136
+Control,C4,standard,Female,Cristiana,1.134149678,20.42591375,5552504
+Control,C4,standard,Female,Donka ,1.18850531,20.95486944,5671738
+Control,C5,standard,Female,Amada ,1.092561551,20.35761015,5366846
+Control,C5,standard,Female,Ningal ,1.096712533,20.42591375,5369221
+Control,C6,standard,Female,Farohildis ,1.045933611,20.86089763,5013848
+Control,C6,standard,Female,Angelina ,1.035969655,21.30514479,4862533
+Selected,S1,poor,Female,Hirune,0.828881472,18.18181818,4558848
+Selected,S1,poor,Female,Lilavita ,0.848406672,17.58906327,4823490
+Selected,S2,poor,Female,Jade ,0.856623145,17.02678014,5031034
+Selected,S2,poor,Female,Ilmataer ,0.838938811,16.4672999,5094574
+Selected,S3,poor,Female,Celestina ,0.911003771,16.9828961,5364243
+Selected,S3,poor,Female,Margo,0.839341714,17.01110705,4934080
+Selected,S4,poor,Female,Jaslyn ,0.961039964,16.4750877,5833292
+Selected,S4,poor,Female,Winifred,0.903695762,17.02678014,5307497
+Selected,S5,poor,Female,Iphigenia,1.094070364,18.2120207,6007408
+Selected,S5,poor,Female,Ingeborg,1.002067233,17.01110705,5890664
+Selected,S6,poor,Female,Kyla ,0.83146052,16.9828961,4895870
+Selected,S6,poor,Female,Meena,0.918763101,18.267716,5029436
+Selected,S1,standard,Female,Ziva,1.035821783,20.4670125,5060933
+Selected,S1,standard,Female,Bianka,1.024427861,22.8085143,4491427
+Selected,S2,standard,Female,Maria ,1.080298958,20.42591375,5288865
+Selected,S2,standard,Female,Alma,1.154256323,20.42591375,5650941
+Selected,S3,standard,Female,Oshrat ,1.134560696,19.66185186,5770365
+Selected,S3,standard,Female,Dolly ,1.041604358,19.36152978,5379763
+Selected,S4,standard,Female,Wapanacahkos,1.017816622,21.81297966,4666105
+Selected,S4,standard,Female,Chandra,1.03872943,20.13051679,5159974
+Selected,S5,standard,Female,Assumpcio,0.993552434,20.20452804,4917474
+Selected,S5,standard,Female,Ermelinda,1.014397274,19.62236991,5169596
+Selected,S6,standard,Female,Thais,0.946442441,21.30514479,4442319
+Selected,S6,standard,Female,Isabella,0.931792139,21.98036231,4239203
+Control,C1,poor,Male,Philip,0.736028996,14.76317956,4985572
+Control,C1,poor,Male,Prasad,0.691988769,14.96830233,4623028
+Control,C2,poor,Male,Oved,0.780773156,14.73058944,5300352
+Control,C2,poor,Male,Ugochukwu ,0.770475132,15.4768538,4978241
+Control,C3,poor,Male,Theodosios,0.843930236,14.30033634,5901471
+Control,C3,poor,Male,Ingmar,0.83729306,15.17627513,5517118
+Control,C4,poor,Male,Gabriel,0.81813908,14.95299729,5471405
+Control,C4,poor,Male,Ares,0.650919156,13.36757082,4869390
+Control,C5,poor,Male,Mate,0.784857811,14.5459793,5395703
+Control,C5,poor,Male,Andrew,0.715047038,14.10436724,5069685
+Control,C6,poor,Male,Rolf,0.788452224,15.65144896,5037567
+Control,C6,poor,Male,Ratko,0.845776087,15.27836691,5535775
+Control,C1,standard,Male,Elchin ,0.913259735,14.51386866,6292325
+Control,C1,standard,Male,Chima,0.9194599,15.17627513,6058535
+Control,C2,standard,Male,Hildingr,0.837577461,15.65144896,5351437
+Control,C2,standard,Male,Nilam,0.860022499,15.42118022,5576892
+Control,C3,standard,Male,Damocles,0.898641086,16.16401326,5559517
+Control,C3,standard,Male,Praveen ,0.901918845,15.40288695,5855518
+Control,C4,standard,Male,Erminio ,1.051693039,15.42118022,6819796
+Control,C4,standard,Male,Engelbert ,1.076112543,16.1606711,6658836
+Control,C5,standard,Male,Mark ,0.957011548,15.17627513,6305971
+Control,C5,standard,Male,Melisizwe,0.956037307,15.70795385,6086326
+Control,C6,standard,Male,Fadhili,0.923381372,15.40288695,5994859
+Control,C6,standard,Male,Ron,0.946122714,15.92620352,5940667
+Selected,S1,poor,Male,Radha,0.70113167,16.16401326,4337609
+Selected,S1,poor,Male,Robert,0.685963516,14.95299729,4587465
+Selected,S2,poor,Male,Kristof,0.723292852,15.88515606,4553262
+Selected,S2,poor,Male,Vasu,0.838124904,14.9352594,5611720
+Selected,S3,poor,Male,Menelaos,0.654548534,13.38269957,4891005
+Selected,S3,poor,Male,Ciar,0.742291226,13.91108367,5335970
+Selected,S4,poor,Male,David,0.72767412,15.67327812,4642769
+Selected,S4,poor,Male,Jeong-Ho,0.762621743,13.92348216,5477234
+Selected,S5,poor,Male,Asil,0.856036691,15.40288695,5557638
+Selected,S5,poor,Male,Rupert,0.845943198,14.73058944,5742765
+Selected,S6,poor,Male,Yered,0.752559695,14.10436724,5335650
+Selected,S6,poor,Male,Oxala,0.728893024,14.9352594,4880351
+Selected,S1,standard,Male,Zigmars,0.724404633,15.9040221,4554852
+Selected,S1,standard,Male,Michaeas,0.708439714,16.42485784,4313217
+Selected,S2,standard,Male,Jayesh,0.817651076,16.23270134,5037061
+Selected,S2,standard,Male,Efthymios,0.863483394,15.82369464,5456901
+Selected,S3,standard,Male,Ndubuisi,0.891527239,16.18321048,5508964
+Selected,S3,standard,Male,Fachtna,0.886040273,14.95299729,5925503
+Selected,S4,standard,Male,Quintius,0.793067753,15.99388105,4958570
+Selected,S4,standard,Male,Theodoulos,0.794731423,14.74808425,5388710
+Selected,S5,standard,Male,Connor,0.831311575,17.00658224,4888175
+Selected,S5,standard,Male,Eliezer,0.787350348,14.10436724,5582316
+Selected,S6,standard,Male,Artur,0.784509206,15.21549083,5155990
+Selected,S6,standard,Male,Nuno ,0.7529013,16.05162219,4690500
