@@ -1,4 +1,0 @@
-Path - https://www.bbc.co.uk/news/technology-57680753			
-Path - https://www.google.co.uk/search - Query: q=web+programming			
-Path - https://www.amazon.co.uk/s - Query: k=html5&ref=nb_sb_noss_1			
-Path - https://www.bbc.co.uk/news/uk-scotland-58057380 - Fragment:#comments	
