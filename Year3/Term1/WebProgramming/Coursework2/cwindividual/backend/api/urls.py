@@ -18,7 +18,7 @@ from django.urls import path
 from .views import test_api_view, elements, update_element
 
 urlpatterns = [
-    path('elements/', elements, name='list_elements'),
-    path('elements/<int:pk>/', update_element, name='update_element'),
-    path('test.json', test_api_view, name='api test')
+    path("elements/", elements, name="list_elements"),
+    path("elements/<int:pk>/", update_element, name="update_element"),
+    path("test.json", test_api_view, name="api test"),
 ]
