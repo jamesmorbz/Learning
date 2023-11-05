@@ -46,11 +46,12 @@ export default {
       })
         .then(response => response.json())
         .then(data => {
-          this.$emit("createElement", data);
+          this.$emit('elementRefresh');
         })
         .catch(error => {
           console.error("Error:", error);
         });
+
     }
   }
 };

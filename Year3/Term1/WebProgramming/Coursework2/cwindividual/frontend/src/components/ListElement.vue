@@ -12,7 +12,6 @@
             Status: <strong>{{ element.is_available ? 'Available' : 'Not Available' }}</strong>
           </div>
           <div>
-            <button @click="updateElement(element)" class="btn btn-primary mr-2">Edit</button>
             <button @click="deleteElement(element)" class="btn btn-danger m-2">Delete</button>
           </div>
         </div>
@@ -42,13 +41,17 @@ export default {
           console.error("Error:", error);
         });
     },
-    updateElement(element) {
-      console.log("Update button clicked for element:", element);
-      this.$emit("updateElement", element);
-    },
     deleteElement(element) {
-      console.log("Delete button clicked for element:", element);
-      this.$emit("deleteElement", element);
+      console.log(element)
+      fetch(`http://localhost:8000/api/elements/${element.id}/`, {
+        method: "DELETE"
+      })
+        .then(response => {
+          this.$emit("elementRefresh", element.id);
+        })
+        .catch(error => {
+          console.error("Error:", error);
+        });
     },
   }
 };
