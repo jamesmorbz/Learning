@@ -1,5 +1,18 @@
 <template>
-  <form @submit.prevent="createElement" class="my-4">
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Create Element
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Create Element</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form @submit.prevent="createElement" class="my-4">
     <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" id="name" v-model="elementData.name" required class="form-control">
@@ -22,8 +35,16 @@
       <input type="radio" id="available" v-model="elementData.available" name="available" value=0>
       <label for="available" class="p-1">Not Currently Available</label>
     </div>
-    <button type="submit" class="btn btn-primary m-1 p-2">Create Element</button>
   </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button @submit.prevent="createElement" type="submit" @click=createElement class="btn btn-primary">Create Element</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
 </template>
 
 <script>
@@ -32,7 +53,7 @@ export default {
     return {
       elementData: {
         name: "",
-        desciption: "",
+        description: "",
         price: 0.00,
         available: 1,
       }

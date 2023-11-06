@@ -12,6 +12,7 @@
             Status: <strong>{{ element.is_available ? 'Available' : 'Not Available' }}</strong>
           </div>
           <div>
+            <UpdateElement @elementRefresh="fetchElements" :elementData="element" class="mt-4" />
             <button @click="deleteElement(element)" class="btn btn-danger m-2">Delete</button>
           </div>
         </div>
@@ -21,14 +22,20 @@
 </template>
 
 <script>
+import UpdateElement from './UpdateElement.vue';
+
 export default {
   data() {
     return {
-      elements: []
+      elements: [],
+      elementData: null
     };
   },
   created() {
     this.fetchElements();
+  },
+  components: {
+    UpdateElement, // Register the UpdateElement component
   },
   methods: {
     fetchElements() {
@@ -52,6 +59,10 @@ export default {
         .catch(error => {
           console.error("Error:", error);
         });
+    },
+    editElement(element) {
+      console.log("Pressing Update for element: " + element.id)
+      this.elementData = element;
     },
   }
 };
