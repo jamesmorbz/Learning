@@ -161,3 +161,4 @@ dist-ssr
 *.sw?
 
 .DS_Store
+/**/*.zip
