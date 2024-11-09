@@ -1,11 +1,12 @@
 import React from 'react';
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Example, Footer, Navbar, News, QuickStats, Reminders, SearchBar } from './components';
+import { Example, Header, Footer, Navbar, News, QuickStats, Reminders, SearchBar } from './components';
 
 const App = () => {
   return (
     <div>
+      <Header />
       <Navbar />
       <SearchBar />
       <News />

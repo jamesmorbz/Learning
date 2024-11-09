@@ -14,9 +14,6 @@ const value = "LDN"
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#">
-                Covid Business Regulations
-            </a>
             <button
                 className="navbar-toggler"
                 type="button"
@@ -38,12 +35,22 @@ const Navbar = () => {
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">
-                            Features
+                            Government Regulations
                         </a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">
-                            Pricing
+                            Pandemic Guidelines
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">
+                            Compliance Training
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">
+                            Important Dates
                         </a>
                     </li>
                     <li className="nav-item dropdown">

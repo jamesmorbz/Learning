@@ -1,5 +1,6 @@
 // Import all the components
 import Example from './example';
+import Header from './header';
 import Footer from './footer';
 import Navbar from './navbar';
 import News from './news';
@@ -10,6 +11,7 @@ import SearchBar from './search-bar';
 // Export all components for easy imports elsewhere
 export {
   Example,
+  Header,
   Footer,
   Navbar,
   News,
