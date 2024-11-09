@@ -1,5 +1,5 @@
 (: let $docs := collection("file:/E:/Coding/University/Year4/SemiStructuredData/files/?select=*xml") :)
-let $docs := collection("./files/?select=*xml")
+let $docs := collection("./files/")
 
 let $pairs :=
     for $s in $docs//s
@@ -27,5 +27,5 @@ let $results :=
 return
     <table>
         <tr><th>Target</th><th>Successor</th><th>Probability</th></tr>
-        {$results}
+        {subsequence($results, 1, 20)}
     </table>

@@ -1,6 +1,6 @@
 (: let $docs := collection("file:/E:/Coding/University/Year4/SemiStructuredData/files/?select=*xml") :)
-let $docs := collection("./files/?select=*xml")
-(: for some reason I wasn't able to test with the ./files syntax locally, had to use the fully quantified path (file:/) - hopefully this works remotely :)
+let $docs := collection("./files/")
+(: for some reason adding the ?select=*xml param to the collection function didn't work for me locally :)
 
 let $rows := 
     for $s in $docs//s
@@ -11,8 +11,9 @@ let $rows :=
         <tr>
             <td>{normalize-space(data($w))}</td>
             <td>{normalize-space(data($next))}</td>
-            (: stripping both outputs as 'has ' and '$next ' exists:)
         </tr>
+
+(: stripping both outputs as 'has ' and '$next ' exists:)
 
 return
     <table>

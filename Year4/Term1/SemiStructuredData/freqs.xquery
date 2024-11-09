@@ -1,5 +1,5 @@
 (: let $docs := collection("file:/E:/Coding/University/Year4/SemiStructuredData/files/?select=*xml") :)
-let $docs := collection("./files/?select=*xml")
+let $docs := collection("./files/")
 
 let $pairs := for $s in $docs//s
               for $w in $s/w
